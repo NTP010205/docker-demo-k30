@@ -1,26 +1,19 @@
-# 🐳 Docker Container Demo - Course: 71ITDS30103
+# 🐳 Docker Container Demo - 71ITDS30103 (K30)
 
-## 📝 Giới thiệu dự án
-Đây là bài thực hành Demo cho chủ đề **Docker Container** thuộc môn học **Các nền tảng phát triển phần mềm (K30)**. Dự án minh họa quy trình đóng gói một ứng dụng Web đơn giản vào Container và sẵn sàng triển khai trên các nền tảng Cloud (Azure/AWS/GCP).
-
-## 🚀 Tính năng chính
-- **Đóng gói (Encapsulation):** Toàn bộ mã nguồn và môi trường chạy (Nginx) được gói gọn trong một Image.
-- **Tính di động (Portability):** Có thể chạy ổn định trên bất kỳ máy tính hoặc nền tảng đám mây nào có hỗ trợ Docker.
-- **Kiến trúc Microservices:** Minh họa cách một dịch vụ web hoạt động độc lập.
-
-## 🛠 Công nghệ sử dụng
-- **Nginx (Alpine version):** Web server siêu nhẹ.
-- **HTML5/CSS3:** Giao diện trang web giới thiệu.
-- **Docker:** Công cụ tạo và quản lý container.
-- **GitHub:** Quản lý mã nguồn và quy trình làm việc nhóm.
+Đây là dự án demo thực hành đóng gói và triển khai ứng dụng Web lên môi trường Container, thuộc môn học **Các nền tảng phát triển phần mềm**.
 
 ## 📋 Yêu cầu hệ thống
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) đã được cài đặt và khởi động.
-- Git (để clone project).
+- **Docker Desktop** đã được cài đặt và đang chạy (trạng thái Running).
+- **Git** (để tải mã nguồn).
 
-## 💻 Hướng dẫn thực thi (Dành cho Demo)
+---
 
-### 1. Clone dự án
+## 🚀 Hướng dẫn cài đặt và chạy (Dành cho Demo)
+
+Để chạy được ứng dụng này trên máy của bạn, vui lòng thực hiện theo 4 bước sau:
+
+### Bước 1: Tải mã nguồn (Clone Source Code)
+Mở Terminal hoặc Command Prompt và chạy lệnh:
 ```bash
-git clone [https://github.com/](https://github.com/)[USER_NAME]/[REPO_NAME].git
-cd [REPO_NAME]
+git clone [https://github.com/NTP010205/docker-demo-k30.git](https://github.com/NTP010205/docker-demo-k30.git)
+cd docker-demo-k30
