@@ -2,21 +2,142 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Docker Demo - Nhóm 71ITDS30103</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Demo Portal - K30IT</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #eef2f3; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; border-top: 5px solid #2496ed; }
-        h1 { color: #2496ed; }
-        .status { color: #2ecc71; font-weight: bold; }
+        :root {
+            --docker-blue: #2496ed;
+            --bg-light: #f8f9fa;
+            --card-bg: rgba(255, 255, 255, 0.8);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bg-light);
+            /* Hiệu ứng vân lưới nhẹ nhàng */
+            background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .main-portal {
+            width: 850px;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 20px;
+            padding: 20px;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            border: 1px solid #ffffff;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        /* Khối bên trái: Thông tin chính */
+        .sidebar {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.02);
+        }
+
+        .docker-logo {
+            width: 100px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 5px 15px rgba(36, 150, 237, 0.3));
+        }
+
+        h1 { color: #1d2125; font-size: 1.5rem; margin-bottom: 10px; }
+        .status-badge {
+            background: #e1f5fe;
+            color: var(--docker-blue);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Khối bên phải: Các tính năng Docker */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            border-bottom: 4px solid var(--docker-blue);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover { transform: translateY(-5px); }
+
+        .feature-card h3 { color: var(--docker-blue); font-size: 0.9rem; margin-bottom: 8px; }
+        .feature-card p { font-size: 0.8rem; color: #666; line-height: 1.4; }
+
+        .full-width { grid-column: span 2; }
+
+        .terminal-box {
+            background: #2d3436;
+            color: #fab1a0;
+            padding: 12px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.75rem;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        footer {
+            grid-column: span 2;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #aaa;
+            padding-top: 10px;
+        }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>🐳 Hello from Docker!</h1>
-        <p>Ứng dụng này đang chạy ổn định bên trong một <b>Container</b>.</p>
-        <p class="status">● Container Status: Running</p>
-        <hr>
-        <p>Môn học: Các nền tảng phát triển phần mềm</p>
+    <div class="main-portal">
+        <div class="sidebar">
+            <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" alt="Docker" class="docker-logo">
+            <h1>CONTAINER LIVE</h1>
+            <p style="font-size: 0.8rem; color: #888; margin-bottom: 15px;">Môi trường Nginx / Alpine</p>
+            <span class="status-badge">● CONTAINER ACTIVE</span>
+            <div class="terminal-box">
+                $ docker inspect demo-container<br>
+                > Status: running<br>
+                > Port: 8888 -> 80
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="feature-card">
+                <h3>📦 Isolation</h3>
+                <p>Ứng dụng chạy biệt lập, không xung đột với hệ thống host.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🚀 Portability</h3>
+                <p>Đóng gói một lần, chạy ở bất cứ đâu (Azure, AWS, GCP).</p>
+            </div>
+            <div class="feature-card full-width">
+                <h3>🛠 Microservices Architecture</h3>
+                <p>Thành phần web này là một "Vi dịch vụ" độc lập trong hệ thống ĐTĐM của nhóm K30IT.</p>
+            </div>
+            <div class="feature-card full-width" style="border-bottom-color: #a371f7;">
+                <h3>👤 Nhóm thực hiện: NTP010205</h3>
+                <p>Dự án Demo môn Các nền tảng phát triển phần mềm - 2026</p>
+            </div>
+        </div>
+        
+        <footer>Powered by Docker Container Technology | Học kỳ 2 - 2025-2026</footer>
     </div>
 </body>
 </html>
