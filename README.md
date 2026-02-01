@@ -46,7 +46,8 @@ docker-demo-k30/
 ├── Dockerfile       # File cấu hình ("Công thức" đóng gói Image)
 ├── index.html       # Mã nguồn giao diện Web Portal
 └── README.md        # Tài liệu hướng dẫn sử dụng (File này)
-🚀 Hướng dẫn cài đặt & Sử dụng
+
+## 🚀 Hướng dẫn cài đặt & Sử dụng
 Yêu cầu máy tính đã cài đặt Docker Desktop.
 
 Bước 1: Clone dự án về máy
@@ -70,7 +71,7 @@ Mở trình duyệt và truy cập địa chỉ:
 
 http://localhost:8888
 
-👨‍💻 Minh chứng kỹ thuật (Dành cho Demo)
+## 👨‍💻 Minh chứng kỹ thuật (Dành cho Demo)
 Để kiểm tra trạng thái hoạt động của Container, bạn có thể sử dụng các lệnh sau trong Terminal:
 
 1. Kiểm tra Container đang chạy:
@@ -85,7 +86,7 @@ docker logs -f demo-container
 
 Bash
 docker rm -f demo-container
-👤 Tác giả
+## 👤 Tác giả
 Sinh viên thực hiện:
 Họ tên: Nguyễn Thành Phát
 MSSV: 2474802016639
