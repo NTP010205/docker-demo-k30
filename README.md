@@ -45,6 +45,7 @@ docker-demo-k30/
 ├── Dockerfile       # File cấu hình ("Công thức" đóng gói Image)
 ├── index.html       # Mã nguồn giao diện Web Portal
 └── README.md        # Tài liệu hướng dẫn sử dụng (File này)
+```
 ---
 ## 🚀 Hướng dẫn cài đặt & Sử dụng
 Yêu cầu máy tính đã cài đặt Docker Desktop.
