@@ -5,7 +5,7 @@
 ![Linux](https://img.shields.io/badge/Alpine_Linux-%230D597F.svg?style=for-the-badge&logo=alpine-linux&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Stable-success?style=for-the-badge)
 
-> Dự án demo triển khai ứng dụng Web tĩnh (Static Web) trên nền tảng **Docker Container**, minh họa cho bài học **Chương 7: Dịch vụ Container** thuộc môn học **Các nền tảng phát triển phần mềm**.
+> Dự án demo triển khai ứng dụng Web tĩnh (Static Web) trên nền tảng **Docker Container**,thuộc môn học **Các nền tảng phát triển phần mềm**.
 
 ---
 
@@ -46,3 +46,50 @@ docker-demo-k30/
 ├── Dockerfile       # File cấu hình ("Công thức" đóng gói Image)
 ├── index.html       # Mã nguồn giao diện Web Portal
 └── README.md        # Tài liệu hướng dẫn sử dụng (File này)
+🚀 Hướng dẫn cài đặt & Sử dụng
+Yêu cầu máy tính đã cài đặt Docker Desktop.
+
+Bước 1: Clone dự án về máy
+Mở Terminal và chạy lệnh sau:
+
+Bash
+git clone [https://github.com/NTP010205/docker-demo-k30.git](https://github.com/NTP010205/docker-demo-k30.git)
+cd docker-demo-k30
+Bước 2: Build Docker Image
+Đóng gói mã nguồn thành Image với tên docker-portal-light:v1:
+
+Bash
+docker build -t docker-portal-light:v1 .
+Bước 3: Khởi chạy Container
+Chạy ứng dụng ở chế độ nền (detached), ánh xạ cổng 80 của Container ra cổng 8888 của máy thật:
+
+Bash
+docker run -d -p 8888:80 --name demo-container docker-portal-light:v1
+Bước 4: Truy cập ứng dụng
+Mở trình duyệt và truy cập địa chỉ:
+
+http://localhost:8888
+
+👨‍💻 Minh chứng kỹ thuật (Dành cho Demo)
+Để kiểm tra trạng thái hoạt động của Container, bạn có thể sử dụng các lệnh sau trong Terminal:
+
+1. Kiểm tra Container đang chạy:
+
+Bash
+docker ps
+2. Xem nhật ký truy cập (Real-time Logs): (Gõ lệnh này và F5 trình duyệt để thấy log nhảy liên tục)
+
+Bash
+docker logs -f demo-container
+3. Dừng và xóa Container:
+
+Bash
+docker rm -f demo-container
+👤 Tác giả
+Sinh viên thực hiện:
+Họ tên: Nguyễn Thành Phát
+MSSV: 2474802016639
+Lớp: K30CNTT07 - Nhóm On Nine Could
+Trường: Đại học Văn Lang (VLU)
+
+© 2026 Docker Demo Project. Built with ❤️ and Docker.
