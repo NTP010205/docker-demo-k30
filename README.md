@@ -38,7 +38,6 @@ Dự án này mô phỏng việc đóng gói (Containerization) một ứng dụ
 | **HTML5/CSS3** | Giao diện người dùng phong cách Glassmorphism/Portal. |
 
 ---
-
 ## 📂 Cấu trúc dự án
 
 ```text
@@ -46,7 +45,7 @@ docker-demo-k30/
 ├── Dockerfile       # File cấu hình ("Công thức" đóng gói Image)
 ├── index.html       # Mã nguồn giao diện Web Portal
 └── README.md        # Tài liệu hướng dẫn sử dụng (File này)
-
+---
 ## 🚀 Hướng dẫn cài đặt & Sử dụng
 Yêu cầu máy tính đã cài đặt Docker Desktop.
 
@@ -70,7 +69,7 @@ Bước 4: Truy cập ứng dụng
 Mở trình duyệt và truy cập địa chỉ:
 
 http://localhost:8888
-
+---
 ## 👨‍💻 Minh chứng kỹ thuật (Dành cho Demo)
 Để kiểm tra trạng thái hoạt động của Container, bạn có thể sử dụng các lệnh sau trong Terminal:
 
@@ -86,6 +85,7 @@ docker logs -f demo-container
 
 Bash
 docker rm -f demo-container
+---
 ## 👤 Tác giả
 Sinh viên thực hiện:
 Họ tên: Nguyễn Thành Phát
