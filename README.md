@@ -50,8 +50,8 @@ docker-demo-k30/
 ## 🚀 Hướng dẫn cài đặt & Sử dụng
 Yêu cầu máy tính đã cài đặt Docker Desktop.
 
-Bước 1: Clone dự án về máy
-Mở Terminal và chạy lệnh sau:
+- Bước 1: Clone dự án về máy
+- Mở Terminal và chạy lệnh sau:
 
 Bash
 git clone [https://github.com/NTP010205/docker-demo-k30.git](https://github.com/NTP010205/docker-demo-k30.git)
