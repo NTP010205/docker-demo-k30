@@ -125,6 +125,11 @@ docker rm -f demo-container
 - **Lớp:** K30CNTT07 - Nhóm On Nine Could
 - **Trường:** Đại học Văn Lang (VLU)
 
+- **Họ tên:** Huỳnh Trí Minh
+- **MSSV:** 2474802010235
+- **Lớp:** K30CNTT07 - Nhóm On Nine Could
+- **Trường:** Đại học Văn Lang (VLU)
+
 ---
 
 © 2026 Docker Demo Project. Built with ❤️ and Docker.
